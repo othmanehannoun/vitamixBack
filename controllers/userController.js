@@ -48,12 +48,12 @@ exports.signin = (req, res) => {
     
             res.cookie('token', token, { expire: new Date() + (60*24*3600000) })
 
-            const {_id, name, email, role} = user;
+            const {_id, name, email, role, phone} = user;
 
             // return res.json({
             //     token, user: {_id, name, email, role}
             // })
-            return res.json({ user: {_id, name, email, role} })
+            return res.json({ user: {_id, name, email, phone, role} })
         })
     }
     catch(error) {

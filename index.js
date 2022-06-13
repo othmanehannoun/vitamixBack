@@ -11,6 +11,7 @@ const emailRouter = require('./routes/mail')
 const categoryRouter = require('./routes/category')
 const productRouter = require('./routes/product')
 const subcategoryRouter = require('./routes/subCategory')
+const orderRouter = require('./routes/order')
 
 // config app
 require('dotenv').config()
@@ -49,6 +50,7 @@ app.use('/api/emails', emailRouter)
 app.use('/api/category', categoryRouter)
 app.use('/api/product', productRouter)
 app.use('/api/subcategory', subcategoryRouter)
+app.use('/api/order', orderRouter)
 
 const port = process.env.PORT || 3000
 app.listen(port, () => console.log(`app is now listening at port ${port}`))
